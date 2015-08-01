@@ -1,23 +1,23 @@
-public class GroovyPerson {
-  private String name
-  private String dob
-  private String gender
+ class GroovyPerson {
+   String name
+   String dob
+   String gender
 
-  public GroovyPerson(String name, String dob, String gender){
+   GroovyPerson(String name, String dob, String gender){
     this.name = name
     this.dob = dob
     this.gender = gender
   }
 
-  public String getName(){
+   String getName(){
     return this.name
   }
 
-  public String getDob(){
+   String getDob(){
     return this.dob
   }
 
-  public String getGender(){
+   String getGender(){
     return this.gender
   }
 }
