@@ -9,16 +9,5 @@
     this.gender = gender
   }
 
-   String getName(){
-    return this.name
-  }
-
-   String getDob(){
-    return this.dob
-  }
-
-   String getGender(){
-    return this.gender
-  }
 }
 
