@@ -1,6 +1,7 @@
 import java.util.Map;
 import java.util.HashMap;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Utils {
 
@@ -11,6 +12,11 @@ public class Utils {
       result.put(list.get(i), list.get(i + 1));
     }
     return result;
+  }
+
+  public static Person findJim(List<Person> people) {
+    Person jim = people.stream().filter(x -> {return x.getName().equals("James Kirk");}).findFirst().get();
+    return jim;
   }
 
 }

@@ -38,4 +38,16 @@ public class UtilsTest {
     assertEquals("value2", result.get("key2"));
     assertEquals(result.keySet().size(), 2);
   }
+
+  @Test public void findsTheFirstPersonCalledJim() {
+    List<Person> jimAndOthers = new ArrayList<Person>();
+    Person jim = new Person("James Kirk", "22-03-2233", "M");
+    Person spock = new Person("Spock", "01-01-2230", "M");
+    jimAndOthers.add(spock);
+    jimAndOthers.add(jim);
+
+    Person result = Utils.findJim(jimAndOthers);
+
+    assertEquals(jim, result);
+  }
 }
