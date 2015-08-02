@@ -19,4 +19,14 @@ public class Utils {
     return jim;
   }
 
+  public static Integer doTheOverload(Object o) {
+    System.out.println("Hey, I'm the object version of the method");
+    return 1;
+  }
+
+  public static Integer doTheOverload(String s) {
+    System.out.println("Hey, I'm the string version of the method");
+    return 2;
+  }
+
 }

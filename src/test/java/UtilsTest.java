@@ -50,4 +50,13 @@ public class UtilsTest {
 
     assertEquals(jim, result);
   }
+
+  @Test public void usesTheCorrectMethodWhenOverloading() {
+    Object object = new String("Do you know that I'm actually a string?");
+    Integer result = Utils.doTheOverload(object);
+    assertEquals((Object)1, (Object)result);
+  }
+
+
+
 }
