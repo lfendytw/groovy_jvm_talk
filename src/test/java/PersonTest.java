@@ -1,5 +1,7 @@
 import org.junit.Test;
 import static org.junit.Assert.*;
+import java.util.HashSet;
+import java.util.Arrays;
 
 public class PersonTest {
     @Test public void personShouldHaveName() {
@@ -33,6 +35,11 @@ public class PersonTest {
         assertEquals("Sydney - 2", toTest.timesVisitedLocation("Sydney"), 2);
         assertEquals("Brisbane - 7", toTest.timesVisitedLocation("Brisbane"), 7);
         assertEquals("Adelaide - 3", toTest.timesVisitedLocation("Adelaide"), 3);
+    }
+
+    @Test public void personLocationVisitedMoreThanShouldFilterCorrectly() {
+        Person toTest = new Person("","","");
+        assertEquals("Melbourne,Brisbane", new HashSet<String>(Arrays.asList("Melbourne","Brisbane")), toTest.locationsVisitedMoreThan(4));
     }
 }
 

@@ -1,5 +1,7 @@
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 public class Person {
   private String name;
@@ -47,4 +49,11 @@ public class Person {
     return toReturn == null ? 0 : toReturn;
   }
 
+  public Set<String> locationsVisitedMoreThan(int limit){
+    Map<String, Integer> collect = timesVisited.entrySet()
+      .parallelStream()
+      .filter(e -> e.getValue() > limit)
+      .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+    return collect.keySet();
+  }
 }

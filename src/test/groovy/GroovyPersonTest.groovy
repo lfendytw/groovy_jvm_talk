@@ -13,7 +13,6 @@ class GroovyPersonTest {
       })
     }
 
-
     @Test public void personLocationVisitedShouldIncreaseWithNewAdditions() {
         Person toTest = new Person("","","");
         String location = "Some Location";
