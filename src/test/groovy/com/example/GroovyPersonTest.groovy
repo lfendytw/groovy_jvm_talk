@@ -1,20 +1,19 @@
-import org.junit.Test;
-import static org.junit.Assert.*;
-import java.util.HashSet;
-import java.util.Arrays;
+package com.example;
 
-public class PersonTest {
-    @Test public void personShouldHaveName() {
-        Person toTest = new Person("John", "don't care", "don't care");
-        assertEquals("instantiated Person should have name", toTest.getName(), "John");
-    }
-    @Test public void personShouldHaveDob() {
-        Person toTest = new Person("don't care", "14-12-1988", "don't care");
-        assertEquals("instantiated Person should have dob", toTest.getDob(), "14-12-1988");
-    }
-    @Test public void personShouldHaveGender() {
-        Person toTest = new Person("don't care", "don't care", "M");
-        assertEquals("instantiated Person should have gender", toTest.getGender(), "M");
+import org.junit.Test
+import com.demo.Person
+import static org.junit.Assert.*;
+
+class GroovyPersonTest {
+
+    @Test
+    void "person should have its property"() {
+      def personMap = [name: "John", dob: "14-12-1988", gender: "M"]
+
+      personMap.forEach({prop, value ->
+        GroovyPerson toTest = GroovyPerson.newInstance(["${prop}": value])
+        assert toTest[prop] == value, "instantiated Person should have ${prop}"
+      })
     }
 
     @Test public void personLocationVisitedShouldIncreaseWithNewAdditions() {
@@ -37,9 +36,6 @@ public class PersonTest {
         assertEquals("Adelaide - 3", toTest.timesVisitedLocation("Adelaide"), 3);
     }
 
-    @Test public void personLocationVisitedMoreThanShouldFilterCorrectly() {
-        Person toTest = new Person("","","");
-        assertEquals("Melbourne,Brisbane", new HashSet<String>(Arrays.asList("Melbourne","Brisbane")), toTest.locationsVisitedMoreThan(4));
-    }
 }
+
 

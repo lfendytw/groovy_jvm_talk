@@ -1,3 +1,8 @@
+package com.example
+
+import groovy.transform.EqualsAndHashCode
+
+@EqualsAndHashCode
 class GroovyPerson {
   String name
   String dob

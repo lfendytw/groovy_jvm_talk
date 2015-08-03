@@ -8,6 +8,10 @@ class GroovyUtils {
       map[it[0]] = it[1]
     }
     map 
-  } 
+  }
+
+  GroovyPerson findJim(List<GroovyPerson> people) {
+    people.find { it.name == "James Kirk"  }
+  }
 
 }

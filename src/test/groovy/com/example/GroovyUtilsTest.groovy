@@ -30,5 +30,11 @@ class GroovyUtilsTest {
     assert utils.listToMap(strings) == [key1: "value1", key2: "value2", key3: null]
   }
 
+  @Test void "find Jim"() {
+    GroovyPerson jim = new GroovyPerson(name: "James Kirk")
+    List<GroovyPerson> people = [new GroovyPerson(name: "Spock"), new GroovyPerson(name: "James Kirk")]
+    assert utils.findJim(people) == jim
+  }
+
 }
 
