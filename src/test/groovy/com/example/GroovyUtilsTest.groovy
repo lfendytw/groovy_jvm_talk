@@ -36,5 +36,10 @@ class GroovyUtilsTest {
     assert utils.findJim(people) == jim
   }
 
+  @Test public void usesTheCorrectMethodWhenOverloading() {
+    Object object = new String("Do you know that I'm actually a string?")
+    assert utils.doTheOverload(object) == 2
+  }
+
 }
 
