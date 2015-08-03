@@ -26,17 +26,19 @@ public class UtilsTest {
     assertEquals("value2", result.get("key2"));
   }
 
-  @Test public void ignoresTrailingListItems() {
+  @Test public void ifMapHasOddNumberOfElementsFinalElementBecomesKeyWithNullValue() {
     List<String> listMap = new ArrayList<String>();
     listMap.add("key1");
     listMap.add("value1");
     listMap.add("key2");
     listMap.add("value2");
-    listMap.add("ignoremeplease");
+    listMap.add("key3");
     Map<String, String> result = Utils.listToMap(listMap);
     assertEquals("value1", result.get("key1"));
     assertEquals("value2", result.get("key2"));
-    assertEquals(result.keySet().size(), 2);
+    assertTrue(result.keySet().contains("key3"));
+    assertTrue(result.get("key3") == null);
+    assertEquals(3, result.keySet().size());
   }
 
   @Test public void findsTheFirstPersonCalledJim() {
@@ -56,7 +58,5 @@ public class UtilsTest {
     Integer result = Utils.doTheOverload(object);
     assertEquals((Object)1, (Object)result);
   }
-
-
 
 }
