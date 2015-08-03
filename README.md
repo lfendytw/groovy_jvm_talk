@@ -56,19 +56,20 @@ gradle init --type java-library
     - Keep old java class. Gradle can co-compile Java & Groovy
 
     - Java class to include:
+    "Convenience? removal of fluff"
     - Show POJO. Convert to POGO (Fendy)
         - Talk about default access. Java is package, Groovy is private with getter/setter
         - Talk about Groovy aliases for getting/setting. object.thing -> object.getThing()
+        - Taking a map and instansiating an object from it (Fendy)
+    --> "Groovy and encapsulation?"
+    - Generate formatted string "Blah blah {number/object}" (Fendy)
 
+    - Talk about type inference (benefit of a dynamic vs static language) (John)
     - Take a list of key value pair and create a map (John)
-
-    - Taking a map and instansiating an object from it (Fendy)
-
     - Finding elemens in a collection matching a condition (John)
         - Talk about closure in Groovy. Functions as first class citizens
         - Use method that takes a person and tells you if the person exists in the collection (to demo @EqualsAndHashCode)
 
-    - Generate formatted string "Blah blah {number/object}" (Fendy)
 
 
     - A demo of run vs compile time method calls (John)
