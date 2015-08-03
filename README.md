@@ -66,6 +66,7 @@ gradle init --type java-library
 
     - Finding elemens in a collection matching a condition (John)
         - Talk about closure in Groovy. Functions as first class citizens
+        - Use method that takes a person and tells you if the person exists in the collection (to demo @EqualsAndHashCode)
 
     - Generate formatted string "Blah blah {number/object}" (Fendy)
 
