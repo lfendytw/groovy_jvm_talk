@@ -75,3 +75,10 @@ gradle init --type java-library
         - Lead into performance discussion/comparison
 
 - Start converting methods into Groovy one by one.
+
+
+- Also demo the ?. operator and ?: ternary.
+
+def location = user.city ?: user.state
+
+Similar to thing = this || that in javascript
