@@ -38,7 +38,7 @@ class GroovyUtilsTest {
 
   @Test public void usesTheCorrectMethodWhenOverloading() {
     Object object = new String("Do you know that I'm actually a string?")
-    assert utils.doTheOverload(object) == 2
+    assert utils.doTheOverload(object) == "passed in arg is STRING"
   }
 
 }

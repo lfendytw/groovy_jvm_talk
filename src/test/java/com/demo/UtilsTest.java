@@ -57,8 +57,8 @@ public class UtilsTest {
 
   @Test public void usesTheCorrectMethodWhenOverloading() {
     Object object = new String("Do you know that I'm actually a string?");
-    Integer result = Utils.doTheOverload(object);
-    assertEquals((Object)1, (Object)result);
+    String result = Utils.doTheOverload(object);
+    assertEquals("passed in arg is OBJECT", result);
   }
 
 }

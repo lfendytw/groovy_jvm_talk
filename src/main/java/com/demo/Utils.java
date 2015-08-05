@@ -25,14 +25,12 @@ public class Utils {
     return jim;
   }
 
-  public static Integer doTheOverload(Object o) {
-    System.out.println("Hey, I'm the object version of the method");
-    return 1;
+  public static String doTheOverload(Object o) {
+    return "passed in arg is OBJECT";
   }
 
-  public static Integer doTheOverload(String s) {
-    System.out.println("Hey, I'm the string version of the method");
-    return 2;
+  public static String doTheOverload(String s) {
+    return "passed in arg is STRING";
   }
 
 }

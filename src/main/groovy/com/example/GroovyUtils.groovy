@@ -14,14 +14,12 @@ class GroovyUtils {
     people.find { it.name == "James Kirk" }
   }
 
-  Integer doTheOverload(Object o) {
-    System.out.println("Hey, I'm the object version of the method")
-    1
+  String doTheOverload(Object o) {
+    "passed in arg is OBJECT"
   }
 
-  Integer doTheOverload(String s) {
-    System.out.println("Hey, I'm the string version of the method")
-    2
+  String doTheOverload(String s) {
+    "passed in arg is STRING"
   }
 
 }
